@@ -14,6 +14,7 @@ docker compose up -d
 
 Vous retrouverez php my admin sur http://localhost:8081
 
-user : admin
-pass : admin
-db : queries
+Infos :
+- user : admin
+- pass : admin
+- db : queries
