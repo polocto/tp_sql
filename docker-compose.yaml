@@ -4,14 +4,15 @@ services:
     image: mysql:latest
     container_name: db
     environment:
-      MYSQL_ROOT_PASSWORD: my_secret_password
-      MYSQL_DATABASE: app_db
-      MYSQL_USER: db_user
-      MYSQL_PASSWORD: db_user_pass
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: queries
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
     ports:
       - "6033:3306"
     volumes:
       - dbdata:/var/lib/mysql
+      - ./docker-entrypoint:/docker-entrypoint-initdb.d
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: pma
